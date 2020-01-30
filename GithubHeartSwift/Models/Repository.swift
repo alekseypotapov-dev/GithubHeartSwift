@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct RepositoryItem: Codable, Equatable {
+struct RepositoryItem: Codable {
     var name: String
     var full_name: String
     var description: String

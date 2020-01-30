@@ -8,7 +8,7 @@ struct RepositoryListView: View {
                 Text("Preview1")
                 Text("Preview2")
             }
-            .navigationBarTitle("Repository List")`
+            .navigationBarTitle("Repository List")
         }
     }
 }
