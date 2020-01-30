@@ -1,5 +1,5 @@
 import SwiftUI
 
-struct RepositoriesItem: Codable {
+struct RepositoriesItem: Codable, Hashable {
     var items: [RepositoryItem]
 }

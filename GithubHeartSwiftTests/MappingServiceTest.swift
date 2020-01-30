@@ -2,16 +2,6 @@
 import XCTest
 
 final class MappingServiceTest: XCTestCase {
-    private var sut: MappingService!
-
-    override func setUp() {
-        super.setUp()
-
-    }
-
-    override class func tearDown() {
-        super.tearDown()
-    }
 
     func test_decode_repositories() {
         let decoder = JSONDecoder()

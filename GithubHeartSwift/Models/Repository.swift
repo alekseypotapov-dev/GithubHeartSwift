@@ -1,6 +1,7 @@
 import SwiftUI
 
-struct RepositoryItem: Codable {
+struct RepositoryItem: Codable, Hashable, Identifiable {
+    var id: Int
     var name: String
     var full_name: String
     var description: String
