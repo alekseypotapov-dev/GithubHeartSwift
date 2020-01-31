@@ -6,11 +6,19 @@ struct RepositoryListView: View {
         NavigationView {
             List {
                 ForEach(items) { item in
-                    Text(item.name)
+                    RepositoryItemRowView(item: item)
                 }
             }
             .navigationBarTitle("Repository List")
         }
+    }
+
+    init(items: [RepositoryItem]) {
+        self.items = items
+        // Workaround
+        // Because UITableView is behind SwiftUI List
+        // We need to remove separators below the list
+        UITableView.appearance().tableFooterView = UIView()
     }
 }
 
