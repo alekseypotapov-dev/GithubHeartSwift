@@ -1,12 +1,12 @@
 import SwiftUI
 
-struct RepositoryListView: View, RepositoryListViewModelProtocol {
-    let viewModel = RepositoryListViewModel()
-    var items: [RepositoryItem]
+struct RepositoryListView: View {
+    @ObservedObject var viewModel = RepositoryListViewModel()
+
     var body: some View {
         NavigationView {
             List {
-                ForEach(items) { item in
+                ForEach(viewModel.repositories) { item in
                     RepositoryItemRowView(item: item)
                 }
             }
@@ -14,14 +14,7 @@ struct RepositoryListView: View, RepositoryListViewModelProtocol {
         }
     }
 
-    func updateList() {
-        self.items = viewModel.repositories
-    }
-
-    init(items: [RepositoryItem]) {
-        viewModel.loadPage(number: 1)
-        self.items = []
-        
+    init() {
         // Workaround
         // Because UITableView is behind SwiftUI List
         // We need to remove separators below the list
@@ -35,6 +28,6 @@ let reps = repositories.items
 
 struct RepositoryListView_Previews: PreviewProvider {
     static var previews: some View {
-        RepositoryListView(items: reps)
+        RepositoryListView()
     }
 }

@@ -10,5 +10,6 @@ enum CustomError: Error {
     case dataNotExists
     case urlNotValid
     case decodeIssue
+    case responseError
     case unknown
 }

@@ -1,16 +1,12 @@
 import Foundation
-protocol RepositoryListViewModelProtocol {
-    func updateList()
-}
 
-class RepositoryListViewModel {
+class RepositoryListViewModel: ObservableObject {
     let networkService = NetworkService()
     let mappingService = MappingService()
-    var delegate: RepositoryListViewModelProtocol?
-    var repositories: [RepositoryItem] = [] {
-        didSet {
-            self.delegate?.updateList()
-        }
+    @Published var repositories: [RepositoryItem] = []
+
+    init() {
+        loadPage(number: 1)
     }
 
     func loadPage(number: Int) {
@@ -19,11 +15,11 @@ class RepositoryListViewModel {
             case .success(let data):
                 let mappingResult = self?.mappingService.mapRepositoriesJSON(data: data)
                 switch mappingResult {
-                case .success(let repositories): self?.repositories = repositories
-                case .failure(_): print("error")
+                case .success(let repositories): DispatchQueue.main.async { self?.repositories = repositories }
+                case .failure(let error): print(error)
                 default: break
                 }
-            case .failure(_): print("error")
+            case .failure(let error): print(error)
             }
         }
     }
