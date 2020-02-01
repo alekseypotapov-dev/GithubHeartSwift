@@ -17,8 +17,9 @@
 		846199A923E4B73200EDA3AB /* ContributorItemRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846199A823E4B73200EDA3AB /* ContributorItemRowView.swift */; };
 		846199AC23E4BFD500EDA3AB /* RepositoryListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846199AB23E4BFD500EDA3AB /* RepositoryListViewModel.swift */; };
 		846199AE23E4C79F00EDA3AB /* ErrorEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846199AD23E4C79F00EDA3AB /* ErrorEnum.swift */; };
+		846199B223E61EC100EDA3AB /* ContributorListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846199B123E61EC100EDA3AB /* ContributorListViewModel.swift */; };
 		84E6E88C23E21C60003917C7 /* RepositoryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E6E88B23E21C60003917C7 /* RepositoryListView.swift */; };
-		84E6E88E23E21C72003917C7 /* RepositoryDetailListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E6E88D23E21C72003917C7 /* RepositoryDetailListView.swift */; };
+		84E6E88E23E21C72003917C7 /* RepositoryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E6E88D23E21C72003917C7 /* RepositoryDetailView.swift */; };
 		84E6E89023E21C7F003917C7 /* ContributorListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E6E88F23E21C7F003917C7 /* ContributorListView.swift */; };
 		84E6E89523E21F02003917C7 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E6E89423E21F02003917C7 /* Repository.swift */; };
 		84E6E89723E21F0C003917C7 /* Contributor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E6E89623E21F0C003917C7 /* Contributor.swift */; };
@@ -50,8 +51,9 @@
 		846199A823E4B73200EDA3AB /* ContributorItemRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributorItemRowView.swift; sourceTree = "<group>"; };
 		846199AB23E4BFD500EDA3AB /* RepositoryListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryListViewModel.swift; sourceTree = "<group>"; };
 		846199AD23E4C79F00EDA3AB /* ErrorEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorEnum.swift; sourceTree = "<group>"; };
+		846199B123E61EC100EDA3AB /* ContributorListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributorListViewModel.swift; sourceTree = "<group>"; };
 		84E6E88B23E21C60003917C7 /* RepositoryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryListView.swift; sourceTree = "<group>"; };
-		84E6E88D23E21C72003917C7 /* RepositoryDetailListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetailListView.swift; sourceTree = "<group>"; };
+		84E6E88D23E21C72003917C7 /* RepositoryDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetailView.swift; sourceTree = "<group>"; };
 		84E6E88F23E21C7F003917C7 /* ContributorListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributorListView.swift; sourceTree = "<group>"; };
 		84E6E89423E21F02003917C7 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		84E6E89623E21F0C003917C7 /* Contributor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contributor.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				846199AB23E4BFD500EDA3AB /* RepositoryListViewModel.swift */,
+				846199B123E61EC100EDA3AB /* ContributorListViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -134,7 +137,7 @@
 			children = (
 				84E6E88B23E21C60003917C7 /* RepositoryListView.swift */,
 				846199A623E4A97200EDA3AB /* RepositoryItemRowView.swift */,
-				84E6E88D23E21C72003917C7 /* RepositoryDetailListView.swift */,
+				84E6E88D23E21C72003917C7 /* RepositoryDetailView.swift */,
 				84E6E88F23E21C7F003917C7 /* ContributorListView.swift */,
 				846199A823E4B73200EDA3AB /* ContributorItemRowView.swift */,
 			);
@@ -283,6 +286,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				846199A923E4B73200EDA3AB /* ContributorItemRowView.swift in Sources */,
+				846199B223E61EC100EDA3AB /* ContributorListViewModel.swift in Sources */,
 				846199AC23E4BFD500EDA3AB /* RepositoryListViewModel.swift in Sources */,
 				84E6E89023E21C7F003917C7 /* ContributorListView.swift in Sources */,
 				841D7F2C23CE572000591707 /* AppDelegate.swift in Sources */,
@@ -292,7 +296,7 @@
 				846199AE23E4C79F00EDA3AB /* ErrorEnum.swift in Sources */,
 				841D7F2E23CE572000591707 /* SceneDelegate.swift in Sources */,
 				84E6E8A023E35A55003917C7 /* Repositories.swift in Sources */,
-				84E6E88E23E21C72003917C7 /* RepositoryDetailListView.swift in Sources */,
+				84E6E88E23E21C72003917C7 /* RepositoryDetailView.swift in Sources */,
 				84E6E88C23E21C60003917C7 /* RepositoryListView.swift in Sources */,
 				84E6E89C23E220D7003917C7 /* MappingService.swift in Sources */,
 				84E6E89523E21F02003917C7 /* Repository.swift in Sources */,

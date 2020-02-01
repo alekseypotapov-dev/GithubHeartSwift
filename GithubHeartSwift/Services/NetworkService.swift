@@ -15,6 +15,7 @@ struct NetworkService {
         makeDataTaskRequest(with: stringUrl, callback: callback)
     }
 
+    // only contributors with >1 contributions are being returned by the API    
     func requestContributors(stringUrl: String,  callback: @escaping (Result<Data, CustomError>) -> Void) {
         makeDataTaskRequest(with: stringUrl, callback: callback)
     }

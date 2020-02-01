@@ -3,7 +3,7 @@ import SwiftUI
 struct RepositoryItemRowView: View {
     var item: RepositoryItem
     var body: some View {
-        NavigationLink(destination: RepositoryDetailView(item: item)) {
+        NavigationLink(destination: RepositoryDetailView(repository: item)) {
             VStack(alignment: .leading) {
                 Text(item.name)
                     .font(.headline)

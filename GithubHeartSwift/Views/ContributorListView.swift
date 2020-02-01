@@ -1,10 +1,10 @@
 import SwiftUI
 
 struct ContributorListView: View {
-    var items: [ContributorItem]
+    @ObservedObject var viewModel: ContributorListViewModel
     var body: some View {
         List {
-            ForEach(items) { item in
+            ForEach(viewModel.contributors) { item in
                 ContributorItemRowView(item: item)
             }
         }
