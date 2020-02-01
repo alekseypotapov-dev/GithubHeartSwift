@@ -1,6 +1,7 @@
 import SwiftUI
 
-struct RepositoryListView: View {
+struct RepositoryListView: View, RepositoryListViewModelProtocol {
+    let viewModel = RepositoryListViewModel()
     var items: [RepositoryItem]
     var body: some View {
         NavigationView {
@@ -13,8 +14,14 @@ struct RepositoryListView: View {
         }
     }
 
+    func updateList() {
+        self.items = viewModel.repositories
+    }
+
     init(items: [RepositoryItem]) {
-        self.items = items
+        viewModel.loadPage(number: 1)
+        self.items = []
+        
         // Workaround
         // Because UITableView is behind SwiftUI List
         // We need to remove separators below the list
