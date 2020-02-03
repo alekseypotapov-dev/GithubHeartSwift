@@ -1,7 +1,12 @@
 import SwiftUI
 
 struct ContributorListView: View {
-    @ObservedObject var viewModel: ContributorListViewModel
+    @ObservedObject var viewModel = ContributorListViewModel()
+
+    init(urlString: String) {
+        viewModel.load(with: urlString)
+    }
+
     var body: some View {
         List {
             ForEach(viewModel.contributors) { item in

@@ -18,6 +18,9 @@
 		846199AC23E4BFD500EDA3AB /* RepositoryListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846199AB23E4BFD500EDA3AB /* RepositoryListViewModel.swift */; };
 		846199AE23E4C79F00EDA3AB /* ErrorEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846199AD23E4C79F00EDA3AB /* ErrorEnum.swift */; };
 		846199B223E61EC100EDA3AB /* ContributorListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846199B123E61EC100EDA3AB /* ContributorListViewModel.swift */; };
+		84A1452923E8ACC6004E6683 /* UIIKit+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A1452823E8ACC6004E6683 /* UIIKit+Extension.swift */; };
+		84A1452B23E8BE34004E6683 /* ContributorAvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A1452A23E8BE34004E6683 /* ContributorAvatarImageView.swift */; };
+		84A1452D23E8BE3E004E6683 /* ContributorAvatarImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A1452C23E8BE3E004E6683 /* ContributorAvatarImageViewModel.swift */; };
 		84E6E88C23E21C60003917C7 /* RepositoryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E6E88B23E21C60003917C7 /* RepositoryListView.swift */; };
 		84E6E88E23E21C72003917C7 /* RepositoryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E6E88D23E21C72003917C7 /* RepositoryDetailView.swift */; };
 		84E6E89023E21C7F003917C7 /* ContributorListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E6E88F23E21C7F003917C7 /* ContributorListView.swift */; };
@@ -52,6 +55,9 @@
 		846199AB23E4BFD500EDA3AB /* RepositoryListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryListViewModel.swift; sourceTree = "<group>"; };
 		846199AD23E4C79F00EDA3AB /* ErrorEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorEnum.swift; sourceTree = "<group>"; };
 		846199B123E61EC100EDA3AB /* ContributorListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributorListViewModel.swift; sourceTree = "<group>"; };
+		84A1452823E8ACC6004E6683 /* UIIKit+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIIKit+Extension.swift"; sourceTree = "<group>"; };
+		84A1452A23E8BE34004E6683 /* ContributorAvatarImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributorAvatarImageView.swift; sourceTree = "<group>"; };
+		84A1452C23E8BE3E004E6683 /* ContributorAvatarImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributorAvatarImageViewModel.swift; sourceTree = "<group>"; };
 		84E6E88B23E21C60003917C7 /* RepositoryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryListView.swift; sourceTree = "<group>"; };
 		84E6E88D23E21C72003917C7 /* RepositoryDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetailView.swift; sourceTree = "<group>"; };
 		84E6E88F23E21C7F003917C7 /* ContributorListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributorListView.swift; sourceTree = "<group>"; };
@@ -128,6 +134,7 @@
 			children = (
 				846199AB23E4BFD500EDA3AB /* RepositoryListViewModel.swift */,
 				846199B123E61EC100EDA3AB /* ContributorListViewModel.swift */,
+				84A1452C23E8BE3E004E6683 /* ContributorAvatarImageViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -140,6 +147,7 @@
 				84E6E88D23E21C72003917C7 /* RepositoryDetailView.swift */,
 				84E6E88F23E21C7F003917C7 /* ContributorListView.swift */,
 				846199A823E4B73200EDA3AB /* ContributorItemRowView.swift */,
+				84A1452A23E8BE34004E6683 /* ContributorAvatarImageView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -169,6 +177,7 @@
 			children = (
 				84E6E89923E220CE003917C7 /* NetworkService.swift */,
 				84E6E89B23E220D7003917C7 /* MappingService.swift */,
+				84A1452823E8ACC6004E6683 /* UIIKit+Extension.swift */,
 				846199AD23E4C79F00EDA3AB /* ErrorEnum.swift */,
 			);
 			path = Services;
@@ -297,8 +306,11 @@
 				841D7F2E23CE572000591707 /* SceneDelegate.swift in Sources */,
 				84E6E8A023E35A55003917C7 /* Repositories.swift in Sources */,
 				84E6E88E23E21C72003917C7 /* RepositoryDetailView.swift in Sources */,
+				84A1452D23E8BE3E004E6683 /* ContributorAvatarImageViewModel.swift in Sources */,
+				84A1452B23E8BE34004E6683 /* ContributorAvatarImageView.swift in Sources */,
 				84E6E88C23E21C60003917C7 /* RepositoryListView.swift in Sources */,
 				84E6E89C23E220D7003917C7 /* MappingService.swift in Sources */,
+				84A1452923E8ACC6004E6683 /* UIIKit+Extension.swift in Sources */,
 				84E6E89523E21F02003917C7 /* Repository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -12,7 +12,7 @@ struct RepositoryDetailView: View {
                 .font(.callout)
             Text("Size: \(repository.size / 1024) MB")
                 .font(.callout)
-            NavigationLink(destination: ContributorListView(viewModel: ContributorListViewModel(urlString: repository.contributors_url))) {
+            NavigationLink(destination: ContributorListView(urlString: repository.contributors_url)) {
                 Text("Contributors")
                     .font(.callout)
             }
