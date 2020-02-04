@@ -30,7 +30,8 @@ Roadmap:
 If you do several requests, you might get the following (partly handled) error:
 ```
 {
-  "message": "API rate limit exceeded for xxx.xxx.xx.66. (But here's the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.)",
+  "message": "API rate limit exceeded for xxx.xxx.xx.xx. (But here's the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.)",
   "documentation_url": "https://developer.github.com/v3/#rate-limiting"
 }
 ```
+Temp solution: Just reload the data a bit later
