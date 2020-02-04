@@ -14,6 +14,11 @@ struct RepositoryListView: View {
                     .onAppear { self.viewModel.loadNextPage() }
             }
             .navigationBarTitle("Repository List")
+            .alert(isPresented: $viewModel.shouldShowError) {
+                Alert(title: Text("Error!"),
+                      message: Text(viewModel.errorMessage),
+                      dismissButton: .default(Text("Close")))
+            }
         }
     }
 
