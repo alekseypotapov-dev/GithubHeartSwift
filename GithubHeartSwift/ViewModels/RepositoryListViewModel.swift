@@ -15,7 +15,7 @@ class RepositoryListViewModel: ObservableObject {
             case .success(let data):
                 let mappingResult = self?.mappingService.mapRepositoriesJSON(data: data)
                 switch mappingResult {
-                case .success(let repositories): DispatchQueue.main.async { self?.repositories = repositories }
+                case .success(let repositories): self?.repositories = repositories
                 case .failure(let error): print(error)
                 default: break
                 }

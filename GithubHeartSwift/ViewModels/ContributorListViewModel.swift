@@ -11,7 +11,7 @@ class ContributorListViewModel: ObservableObject {
             case .success(let data):
                 let mappingResult = self?.mappingService.mapContributorsJSON(data: data)
                 switch mappingResult {
-                case .success(let contributors): DispatchQueue.main.async { self?.contributors = contributors }
+                case .success(let contributors): self?.contributors = contributors
                 case .failure(let error): print(error)
                 default: break
                 }
