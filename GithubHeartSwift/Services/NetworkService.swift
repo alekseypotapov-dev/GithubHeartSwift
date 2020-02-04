@@ -5,7 +5,7 @@ struct NetworkService {
     private let repositoriesPerPageUrlSuffix = "&per_page="
     private let repositoriesPageUrlSuffix = "&page="
 
-    func requestRepository(page: Int, perPage: Int = 25,  callback: @escaping (Result<Data, CustomError>) -> Void) {
+    func requestRepository(page: Int, perPage: Int = 25, callback: @escaping (Result<Data, CustomError>) -> Void) {
         let stringUrl = repositoriesBaseUrl +
             repositoriesPerPageUrlSuffix +
             String(perPage) +
@@ -16,11 +16,11 @@ struct NetworkService {
     }
 
     // only contributors with >1 contributions are being returned by the API    
-    func requestContributors(stringUrl: String,  callback: @escaping (Result<Data, CustomError>) -> Void) {
+    func requestContributors(stringUrl: String, callback: @escaping (Result<Data, CustomError>) -> Void) {
         makeDataTaskRequest(with: stringUrl, callback: callback)
     }
 
-    func requestContributorAvatarImage(stringUrl: String,  callback: @escaping (Result<Data, CustomError>) -> Void) {
+    func requestContributorAvatarImage(stringUrl: String, callback: @escaping (Result<Data, CustomError>) -> Void) {
         makeDataTaskRequest(with: stringUrl, callback: callback)
     }
 
