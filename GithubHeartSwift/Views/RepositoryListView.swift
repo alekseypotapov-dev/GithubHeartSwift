@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct RepositoryListView: View {
-    @ObservedObject var viewModel = RepositoryListViewModel()
+    @ObservedObject private var viewModel = RepositoryListViewModel()
     var body: some View {
         NavigationView {
             List {
@@ -18,5 +18,11 @@ struct RepositoryListView: View {
         // Because UITableView is behind SwiftUI List
         // We need to remove separators below the list
         UITableView.appearance().tableFooterView = UIView()
+    }
+}
+
+struct RepositoryListView_Previews: PreviewProvider {
+    static var previews: some View {
+        RepositoryListView()
     }
 }

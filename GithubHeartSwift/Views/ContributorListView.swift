@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct ContributorListView: View {
-    @ObservedObject var viewModel = ContributorListViewModel()
+    @ObservedObject private var viewModel = ContributorListViewModel()
 
     init(urlString: String) {
         viewModel.load(with: urlString)

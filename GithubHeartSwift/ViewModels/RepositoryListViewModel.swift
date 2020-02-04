@@ -11,7 +11,7 @@ class RepositoryListViewModel: ObservableObject {
 
     func loadPage(number: Int) {
         networkService.requestRepository(page: 1) { [weak self] result in
-            switch result{
+            switch result {
             case .success(let data):
                 let mappingResult = self?.mappingService.mapRepositoriesJSON(data: data)
                 switch mappingResult {

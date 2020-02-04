@@ -20,6 +20,10 @@ struct NetworkService {
         makeDataTaskRequest(with: stringUrl, callback: callback)
     }
 
+    func requestContributorAvatarImage(stringUrl: String,  callback: @escaping (Result<Data, CustomError>) -> Void) {
+        makeDataTaskRequest(with: stringUrl, callback: callback)
+    }
+
     private func makeDataTaskRequest(with stringUrl: String, callback: @escaping (Result<Data, CustomError>) -> Void) {
         if let url =  URL(string: stringUrl) {
             let task = URLSession.shared.dataTask(with: url) { data, _, error in

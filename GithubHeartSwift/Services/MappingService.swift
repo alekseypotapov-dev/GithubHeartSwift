@@ -1,4 +1,4 @@
-import Foundation
+import UIKit
 
 struct MappingService {
     private let decoder = JSONDecoder()
@@ -19,5 +19,12 @@ struct MappingService {
         } catch {
             return .failure(.decodeIssue)
         }
+    }
+
+    func mapContributorAvatarImage(data: Data) -> Result<UIImage, CustomError>  {
+        guard let image = UIImage(data: data) else {
+            return .failure(.dataNotExists)
+        }
+        return .success(image)
     }
 }

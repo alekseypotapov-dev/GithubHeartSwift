@@ -7,7 +7,7 @@ class ContributorListViewModel: ObservableObject {
 
     func load(with urlString: String) {
         networkService.requestContributors(stringUrl: urlString) { [weak self] result in
-            switch result{
+            switch result {
             case .success(let data):
                 let mappingResult = self?.mappingService.mapContributorsJSON(data: data)
                 switch mappingResult {
