@@ -5,6 +5,7 @@ Using MVVM architecture
 Using Github V3 Search API requests:
 
 Request #1 for all repositories sorted by star:
+
 https://api.github.com/search/repositories?q=language:swift&sort=stars&order=desc&per_page=25&page=1
 
 Request #2 for contributor list:
