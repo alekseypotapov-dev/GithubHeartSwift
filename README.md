@@ -1,4 +1,4 @@
-# GithubHeartSwift
+# Github♥️Swift
 Checking capabilities of SwiftUI on a sample project with no third-party frameworks
 Using MVVM architecture
 
