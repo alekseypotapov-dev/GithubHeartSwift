@@ -2,7 +2,7 @@
 Checking capabilities of SwiftUI on a sample project with no third-party frameworks
 Using MVVM architecture
 
-Using Github V3 Search API requests:
+Using [Github V3 Search API](https://developer.github.com/v3/search/#search-repositories) requests:
 
 Request #1 for all repositories sorted by star:
 
