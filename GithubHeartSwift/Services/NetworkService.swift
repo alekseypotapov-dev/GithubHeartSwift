@@ -26,7 +26,7 @@ struct NetworkService {
 
     private func makeDataTaskRequest(with stringUrl: String, callback: @escaping (Result<Data, CustomError>) -> Void) {
         if let url =  URL(string: stringUrl) {
-            let task = URLSession.shared.dataTask(with: url) { data, _, error in
+            let task = URLSession.shared.dataTask(with: url) { data, response, error in
                 DispatchQueue.main.async {
                     if let _ = error {
                         callback(.failure(.responseError))

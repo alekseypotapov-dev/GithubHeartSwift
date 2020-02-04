@@ -8,6 +8,10 @@ struct RepositoryListView: View {
                 ForEach(viewModel.repositories) { item in
                     RepositoryItemRowView(item: item)
                 }
+                Text("loading...")
+                    .font(.callout)
+                    .italic()
+                    .onAppear { self.viewModel.loadNextPage() }
             }
             .navigationBarTitle("Repository List")
         }
