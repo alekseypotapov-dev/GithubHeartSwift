@@ -4,39 +4,44 @@ import XCTest
 final class MappingServiceTest: XCTestCase {
 
     func test_decode_repositories() {
-        let decoder = JSONDecoder()
-        do {
-            let repositories = try decoder.decode(RepositoriesItem.self, from: repositoryListJsonData())
+        let testSut = MappingService<RepositoriesItem>()
+        let result = testSut.mapJSON(data: repositoryListJsonData())
+        switch result {
+        case .success(let repositories):
             let actual = repositories.items.count
             let expected = 2
             XCTAssertEqual(expected, actual,"Expected \(expected) but got \(actual)")
-        } catch {
+        case .failure(let error):
             XCTFail(error.localizedDescription)
         }
     }
 
     func test_decode_repository() {
-        let decoder = JSONDecoder()
-        do {
-            let repositories = try decoder.decode(RepositoriesItem.self, from: repositoryListJsonData())
+        let testSut = MappingService<RepositoriesItem>()
+        let result = testSut.mapJSON(data: repositoryListJsonData())
+        switch result {
+        case .success(let repositories):
             if let repository = repositories.items.first {
                 let actual = repository.name.isEmpty
                 let expected = false
                 XCTAssertEqual(expected, actual,"Expected \(expected) but got \(actual)")
+            } else {
+                XCTFail("no data in repository found")
             }
-        } catch {
+        case .failure(let error):
             XCTFail(error.localizedDescription)
         }
     }
 
     func test_decode_contributors() {
-        let decoder = JSONDecoder()
-        do {
-            let contributors = try decoder.decode([ContributorItem].self, from: contributorListJsonData())
-            let actual = contributors
+        let testSut = MappingService<[ContributorItem]>()
+        let result = testSut.mapJSON(data: contributorListJsonData())
+        switch result {
+        case .success(let contributors):
+            let actual = contributors.count
             let expected = 2
-            XCTAssertEqual(expected, actual.count,"Expected \(expected) but got \(actual)")
-        } catch {
+            XCTAssertEqual(expected, actual,"Expected \(expected) but got \(actual)")
+        case .failure(let error):
             XCTFail(error.localizedDescription)
         }
     }
