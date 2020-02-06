@@ -1,30 +1,14 @@
 import UIKit
 
-struct MappingService {
+struct MappingService<T: Codable> {
     private let decoder = JSONDecoder()
 
-    func mapRepositoriesJSON(data: Data) -> Result<[RepositoryItem], CustomError>  {
+    func mapJSON(data: Data) -> Result<T, CustomError>  {
         do {
-            let repositories = try decoder.decode(RepositoriesItem.self, from: data)
-            return .success(repositories.items)
+            let repositoriesItem = try decoder.decode(T.self, from: data)
+            return .success(repositoriesItem)
         } catch {
             return .failure(.decodeIssue)
         }
-    }
-
-    func mapContributorsJSON(data: Data) -> Result<[ContributorItem], CustomError>  {
-        do {
-            let contributors = try decoder.decode([ContributorItem].self, from: data)
-            return .success(contributors)
-        } catch {
-            return .failure(.decodeIssue)
-        }
-    }
-
-    func mapContributorAvatarImage(data: Data) -> Result<UIImage, CustomError>  {
-        guard let image = UIImage(data: data) else {
-            return .failure(.dataNotExists)
-        }
-        return .success(image)
     }
 }

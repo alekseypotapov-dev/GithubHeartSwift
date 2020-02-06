@@ -2,7 +2,7 @@ import Foundation
 
 class RepositoryListViewModel: ObservableObject {
     let networkService = NetworkService()
-    let mappingService = MappingService()
+    let mappingService = MappingService<RepositoriesItem>()    
     var currentPage = 0
     @Published var repositories: [RepositoryItem] = []
     @Published var shouldShowError: Bool = false
@@ -19,9 +19,9 @@ class RepositoryListViewModel: ObservableObject {
         networkService.requestRepository(page: number) { [weak self] result in
             switch result {
             case .success(let data):
-                let mappingResult = self?.mappingService.mapRepositoriesJSON(data: data)
+                let mappingResult = self?.mappingService.mapJSON(data: data)
                 switch mappingResult {
-                case .success(let repositories): self?.repositories.append(contentsOf: repositories)
+                case .success(let repositories): self?.repositories.append(contentsOf: repositories.items)
                 case .failure(let error):
                     switch error {
                     case .decodeIssue:
